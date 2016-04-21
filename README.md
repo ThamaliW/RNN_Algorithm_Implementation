@@ -1,13 +1,11 @@
 # RNN_Algorithm_Implementation
-We have worked on a project to add Recurrent Neural Network(RNN) algorithm to machine learner. RNN is one of deep learning algorithms with record breaking accuracy. For more information on RNN please refer link[1].
+We have worked on a project to add Recurrent Neural Network(RNN) algorithm to machine learner. RNN is one of deep learning algorithms with record breaking accuracy.
 
-We have decided to use deeplearning4j which is an open source deep learning library scalable on spark and Hadoop.
+Deeplearning4j which is an open source deep learning library scalable on spark and Hadoop was used in the project.
 
 Since there is a plan to add spark pipeline to machine Learner, we have decided to use spark pipeline concept to our project.
 
-I have designed an architecture for the RNN implementation. 
-
-This architecture is developed to be compatible with spark pipeline.
+This architecture of the project was developed to be compatible with spark pipeline.
 
 Data set is taken in csv format and then it is converted to spark data frame since apache spark works mostly with data frames.
 
@@ -21,11 +19,13 @@ Next component is the RNN algorithm model which is an estimator. The iterated da
 
 We  decided to complete this project in two steps :
 
-    First create a spark pipeline program containing the steps in machine learner(uploading dataset, generate model, calculating accuracy and prediction) and check whether the project is feasible.
+First create a spark pipeline program containing the steps in machine learner(uploading dataset, generate model, calculating accuracy and prediction) and check whether the project is feasible.
 
-    Next add the algorithm to ML
+Next add the algorithm to ML
 
-we have created a spark program to prove the feasibility of adding the RNN algorithm to machine learner.
+This repository contatins the spark pipeline program I created for the RNN implementation. 
+
+This program is used to prove the feasibility of adding the RNN algorithm to machine learner.
 This program demonstrates all the steps in machine learner:
 
 Uploading a dataset
@@ -52,6 +52,7 @@ We have designed a pipeline with sequence of stages (transformers and estimators
 
 4. RNN model : Transformer- Transforms data frame with features to data frame with predictions. 
 
+We also tuned it with hyper parameters
 
 Number of epochs-10
 
@@ -59,6 +60,6 @@ Number of iterations- 1
 
 Learning rate-0.02
 
-We used the aclImdb sentiment analysis data set for this program and with the above hyper parameters, we could achieve 60% accuracy. And we are trying to improve the accuracy and efficiency of our algorithm.
+We used the aclImdb sentiment analysis data set for this program.
 
 
